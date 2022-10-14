@@ -1,0 +1,54 @@
+.about {
+    padding: 20px 20px 0 0;
+    background-color: $color-primary;
+    background-image: url("../../images/map.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    min-height: calc(100vh - 160px);
+    justify-content: space-between;
+}
+.about__paragraph {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+.about__title {
+    padding-left: 20px;
+    text-align: center;
+    margin: auto;
+    @extend %font-prim;
+    color: $color-light;
+    font-size: 42px;
+    padding-top:30px;
+    margin:0;
+}
+.about__image {
+    align-self:flex-end;
+    justify-self: end;
+    width:1000px;
+    height: 505px;
+    background-image: url("../../images/aboutNo.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.about__buttons{
+    margin-top:26px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    gap: 40px;
+    &>button{
+        width:320px;
+    }
+    @include media-tablet {
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+}
