@@ -82,3 +82,12 @@
         outline: none;
     }
 }
+.search__loading {
+    margin: auto;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 35px;
+    color: $color-light;
+    text-align: center;
+}
