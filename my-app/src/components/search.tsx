@@ -20,9 +20,11 @@ class Search extends React.Component<ISearch, { input: string; isLoaded: boolean
   }
   handleSearch = () => {
     if (!this.searchRef.current?.value) {
+      this.setState({ isLoaded: false });
       (async () => {
         const data = await apiCharacters(1);
         this.props.cbSearch(data);
+        this.setState({ isLoaded: true });
       })();
     }
   };
@@ -46,7 +48,15 @@ class Search extends React.Component<ISearch, { input: string; isLoaded: boolean
     const { isLoaded } = this.state;
     return (
       <div className="header__search">
-        {!isLoaded ? <div className="overlay"><div className ="search__loading"><p >Loading...</p></div></div> : ''}
+        {!isLoaded ? (
+          <div className="overlay">
+            <div className="search__loading">
+              <p>Loading...</p>
+            </div>
+          </div>
+        ) : (
+          ''
+        )}
         <input
           id="search"
           type="text"
