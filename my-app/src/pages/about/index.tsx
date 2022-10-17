@@ -5,14 +5,16 @@ class AboutUs extends React.Component {
     return (
       <div className="about">
         <div className="about__paragraph">
-          <p className="about__title">Здесь должна быть страница &quot;О нас&quot;. Но ее нет.</p>
           <p className="about__title">
-            <span className="title_yellow">Не путать со страницей 404! </span>
-            Вы можете перейти на страницу 404, используя ссылку в хедере!
+            Here must be a page &quot;About us&quot;. But there is no any.
           </p>
           <p className="about__title">
-            У автора просто не было вдохновения
-            <span className="title_yellow"> создавать страницу &quot;О нас&quot;!</span>
+            <span className="title_yellow">Do not confuse with 404! </span>
+            You can go to the 404 page using the link in the header!
+          </p>
+          <p className="about__title">
+            The author simply had no inspiration
+            <span className="title_yellow"> to create page &quot;About us&quot;!</span>
           </p>
         </div>
         <div className="about__image"></div>
