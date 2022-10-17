@@ -1,10 +1,12 @@
 import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
-import Main from './index';
+import FormAddCard from './search';
+import Search from './search';
+import { apiCharacter } from './api'
 
 describe('index', () => {
   it('renders App component', () => {
-    render (<Main />);
+    render (<Search cbSearch={async ()=> await apiCharacter('Gandalf')} />);
     screen.debug();
     expect(screen.getByPlaceholderText(/Search/i)).toBeInTheDocument();
   });
@@ -21,9 +23,4 @@ it("input focus", () => {
   });
 });
 
-localStorage.setItem("value", 'good');
-localStorage.removeItem('user');
-localStorage.getItem = jest.fn();
-jest.spyOn(localStorage, 'getItem');
-expect(localStorage.getItem('value')).toBe('good')
 

@@ -428,10 +428,10 @@ class FormAddCard extends React.Component<
               onClick={this.checkValues}
               disabled={this.state.submitButton}
             >
-              Добавить
+              Add Card
             </button>
             <button className="button button_white" type="submit" onClick={this.clear}>
-              Сбросить
+              Reset
             </button>
           </div>
         </form>

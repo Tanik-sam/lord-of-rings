@@ -6,7 +6,7 @@ describe('index', () => {
   it('renders App component', () => {
     render (<FormAddCard />);
     screen.debug();
-    expect(screen.getByPlaceholderText(/Создание карточки товара/i)).toBeInTheDocument();
+    expect(screen.getByPlaceholderText(/Creating of card/i)).toBeInTheDocument();
   });
 });
 describe('events', () => {
@@ -20,5 +20,3 @@ it("input focus", () => {
     expect(input).toHaveFocus();
   });
 });
-
-

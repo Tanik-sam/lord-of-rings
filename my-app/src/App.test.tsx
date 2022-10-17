@@ -6,7 +6,7 @@ describe('App', () => {
   it('renders App component', () => {
     render (<App />);
     screen.debug();
-    expect(screen.getByText(/Главная/i)).toBeInTheDocument();
+    expect(screen.getByText(/Main/i)).toBeInTheDocument();
     expect(screen.getByRole('contentinfo')).toBeInTheDocument();
   });
 });
