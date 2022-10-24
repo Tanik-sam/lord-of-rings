@@ -1,6 +1,6 @@
 import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
-import Main from './index';
+import { Main } from './index';
 
 describe('index', () => {
   it('renders App component', () => {

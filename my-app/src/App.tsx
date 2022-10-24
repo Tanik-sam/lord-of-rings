@@ -1,5 +1,5 @@
 import React from 'react';
-import Main from './pages/main/index';
+import { Main } from './pages/main/index';
 import './App.css';
 import { Routes, Route, BrowserRouter } from 'react-router-dom';
 import NotFoundPage from './pages/404/index';

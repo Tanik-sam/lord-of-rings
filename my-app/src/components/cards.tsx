@@ -33,6 +33,7 @@ class Cards extends React.Component<ICharacter, { modal: boolean }> {
         spouse={this.props.spouse}
         wikiUrl={this.props.wikiUrl}
         _id={this.props._id}
+        image={this.props.image}
         cbCloseModal={this.closeModal}
       />
     );
@@ -41,7 +42,9 @@ class Cards extends React.Component<ICharacter, { modal: boolean }> {
         <p className="card__name">{this.props.name}</p>
         <div>{this.state.modal ? modal : ''}</div>
         <div className="card__content">
-          <div className="card__img"></div>
+          <div>
+            <img className="card__img" src={this.props.image} />
+          </div>
           <div>
             <p className="card__text">
               <span className="card__text_bold">Birth: </span>

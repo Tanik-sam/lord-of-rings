@@ -1,19 +1,17 @@
 import { MouseEventHandler, KeyboardEventHandler } from "react";
 
-export interface IData {
-  position: number;
-  category: string;
+export interface ICharterForm {
+  birth: string;
+  death: string;
+  gender: string;
+  hair: string;
+  height: string;
   name: string;
-  art: string;
-  epocsid: boolean;
-  epocsidColor: string;
-  woodType: string;
-  woodColor: string;
-  price: number;
-  freeShipping: boolean;
-  image: string;
-  date: string;
-  like: number;
+  race: string;
+  realm: string;
+  spouse: string;
+  wikiUrl: string;
+  file: File[]
 }
 
 export interface ICharacter {
@@ -28,6 +26,7 @@ export interface ICharacter {
   spouse: string;
   wikiUrl: string;
   _id: string;
+  image: string;
 }
 export interface ICharacterNew {
   position: number;
@@ -42,6 +41,7 @@ export interface ICharacterNew {
   spouse: string;
   wikiUrl: string;
   _id: string;
+  image: string;
 }
 export interface ICharacterMod {
   birth: string;
@@ -55,6 +55,7 @@ export interface ICharacterMod {
   spouse: string;
   wikiUrl: string;
   _id: string;
+  image: string;
   cbCloseModal: MouseEventHandler<HTMLElement>; 
 }
 
